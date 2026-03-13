@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Dengo 💖 Flower</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Música -->
+<audio id="loveMusic" src="musica1.mp3"loop></audio>
+
+
+<!-- Fundo 3D + Corações -->
+<canvas id="bg3d"></canvas>
+<div id="hearts"></div>
+
+<!-- LOGIN -->
+<div id="loginBox" class="glass login-anim">
+  <h2>💌 Acesso Secreto</h2>
+  <input type="text" id="user" placeholder="Usuário">
+  <input type="password" id="pass" placeholder="Senha">
+  <button onclick="login()">Entrar</button>
+  <p id="loginMsg"></p>
+</div>
+
+<!-- APP -->
+<div id="app" class="hidden">
+
+  <header class="glass">
+    <h1>🌸 Dengo & Flower 🌸</h1>
+  </header>
+
+  <nav class="glass ios-nav">
+    <button onclick="openTab('home')">💖</button>
+    <button onclick="openTab('library')">📸</button>
+    <button onclick="openTab('diary')">📖</button>
+    <button onclick="openTab('diaryView')">📝</button>
+    <button onclick="openTab('letter')">💌</button>
+    <button onclick="openTab('letter2')">💌2</button>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home" class="tab glass">
+    <h2>Para Flower 💕</h2>
+    <p id="lovePhrase" class="typing"></p>
+  </section>
+
+  <!-- BIBLIOTECA -->
+  <section id="library" class="tab glass hidden">
+    <h2>Biblioteca 📸🎥</h2>
+    <input type="file" id="fileInput" multiple accept="image/*,video/*">
+    <div id="gallery"></div>
+  </section>
+
+  <!-- DIÁRIO ESCREVER -->
+  <section id="diary" class="tab glass hidden">
+    <h2>Diário 💖</h2>
+    <textarea id="diaryText" placeholder="Escreve aqui..."></textarea>
+    <button onclick="saveDiary()">Salvar</button>
+    <p id="saveMsg"></p>
+  </section>
+
+  <!-- DIÁRIO VISUALIZAR -->
+  <section id="diaryView" class="tab glass hidden">
+    <h2>Memórias Escritas 📝</h2>
+    <div id="diaryList"></div>
+  </section>
+
+  <!-- CARTA -->
+  <section id="letter" class="tab glass hidden">
+    <h2>Carta 💌</h2>
+    <p id="letterText"></p>
+  </section>
+
+ <section id="letter2" class="tab glass hidden">
+  <h2>Carta 2 💌</h2>
+  <p id="letterText2"></p>
+</section>
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
